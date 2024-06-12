@@ -1,0 +1,6 @@
+pdfkit
+requests
+scikit-learn
+joblib
+pyotp
+qrcode
