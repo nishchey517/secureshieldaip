@@ -11,6 +11,7 @@ from pdf_saver import save_as_pdf
 from virustotal_checker import check_virustotal
 from ai_malware_detector import load_model, extract_features, predict_malware
 from mfa import generate_otp, verify_otp, generate_qr_code
+from validate_certificate import validate_certificate
 
 class APKVulnerabilityCheckerApp:
     def __init__(self, root):
@@ -70,7 +71,11 @@ class APKVulnerabilityCheckerApp:
 
         # Save PDF button
         self.save_pdf_button = tk.Button(self.root, text="Save Full Analysis as PDF", command=self.save_full_analysis_pdf, bg="#FF9800", fg="white")
-        self.save_pdf_button.grid(row=1, column=7, padx=10, pady=10, sticky="ew")
+        self.save_pdf_button.grid(row=1, column=8, padx=10, pady=10, sticky="ew")
+
+        # Check Certificate button
+        self.check_certificate_button = tk.Button(self.root, text="Validate Certificates", command=self.validate_certificate, bg="#FF9800", fg="white")
+        self.check_certificate_button.grid(row=1, column=7, padx=10, pady=10, sticky="ew")
 
         # Text area for displaying output
         self.text_area = scrolledtext.ScrolledText(self.root, width=100, height=30, bg="white")
@@ -102,7 +107,7 @@ class APKVulnerabilityCheckerApp:
             messagebox.showwarning("Warning", "No APK file selected")
             return
 
-        report = run_all_analysis(self.file_path)
+        report = analyze_apk(self.file_path)
         if report:
             try:
                 self.text_area.insert(tk.END, report)
@@ -118,6 +123,18 @@ class APKVulnerabilityCheckerApp:
         permissions_report = analyze_permissions(self.file_path)
         self.text_area.insert(tk.END, permissions_report)
         self.report_content += permissions_report
+    
+    def validate_certificate(self):
+        if not self.file_path:
+            messagebox.showwarning("Warning", "No APK file selected")
+            return
+        
+        is_valid_certificate = validate_certificate(self.file_path)
+        if is_valid_certificate:
+            print("Certificate is valid.")
+        else:
+            print("Certificate is invalid or cannot be validated.")
+
 
     def analyze_network_traffic(self):
         if not self.file_path:

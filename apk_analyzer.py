@@ -26,8 +26,8 @@ def analyze_apk(file_path):
     try:
         # Run the AndroBugs analysis command
         process = subprocess.run(command, shell=True, capture_output=True, text=True, check=True)
-        print("Process = ", process)
-        print("------------------Process Printed-----------")
+        print("---------------Process = ", process,"--------------------------")
+        # print("------------------Process Printed-----------")
         # Check if the process completed successfully
         if process.returncode == 0:
             print(f"Vulnerability report saved to: {output_file}")
@@ -36,6 +36,7 @@ def analyze_apk(file_path):
             static_analysis_report = static_analysis(file_path)
 
             # Combine the AndroBugs report with the static analysis report
+            #combined_report = f"{output_file}"
             combined_report = f"{output_file}"+"\n"+f"{static_analysis_report}"
             return combined_report
 

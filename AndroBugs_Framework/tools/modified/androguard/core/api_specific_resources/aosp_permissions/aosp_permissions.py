@@ -1,13 +1,13 @@
-import tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api9 as api9
-import tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api10 as api10
-import tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api14 as api14
-import tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api15 as api15
-import tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api16 as api16
-import tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api17 as api17
-import tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api18 as api18
-import tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api19 as api19
-import tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api21 as api21
-import tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api22 as api22
+import AndroBugs_Framework.tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api9 as api9
+import AndroBugs_Framework.tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api10 as api10
+import AndroBugs_Framework.tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api14 as api14
+import AndroBugs_Framework.tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api15 as api15
+import AndroBugs_Framework.tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api16 as api16
+import AndroBugs_Framework.tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api17 as api17
+import AndroBugs_Framework.tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api18 as api18
+import AndroBugs_Framework.tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api19 as api19
+import AndroBugs_Framework.tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api21 as api21
+import AndroBugs_Framework.tools.modified.androguard.core.api_specific_resources.aosp_permissions.aosp_permissions_api22 as api22
 
 
 AOSP_PERMISSIONS = {
